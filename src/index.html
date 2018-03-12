@@ -52,12 +52,17 @@ list.addEventListener('click', function(ev) {
 // add new element
 function AddFunction() {
     var li = document.createElement("li");
-    // para.className = "bullet";
+    var input = document.getElementById("todo").value;
     var t = document.createTextNode(
       document.getElementById('todo').value
     );
-    li.appendChild(t);
-    document.getElementById("list").appendChild(li);
+
+    if (input === '') {
+      alert("Can't add nothing!");
+    } else {
+      li.appendChild(t);
+      document.getElementById("list").appendChild(li);
+    }
 }
 function Removefromlist(){
   var thingToRemove = document.querySelectorAll(".checked")[0];
