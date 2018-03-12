@@ -19,7 +19,8 @@ label{
 
 }
 input{
-	width: 100%;
+	width: 50%;
+	margin: 10px;
 }
 .btn1{
 	margin: 25px;
@@ -35,6 +36,39 @@ input{
 		border: solid 2px #fff;
 	}
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  color: $color;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+ul li.checked {
+  color: #fff;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
 
 @font-face{
 	font-family: Coiny;
