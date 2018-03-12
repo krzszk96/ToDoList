@@ -1,0 +1,46 @@
+$bg-color: #333;
+$color: #42f489;
+
+body{
+	background: $bg-color;
+}
+.title{
+	color: $color;
+	font-family: 'Coiny';
+	font-size: 60px;
+	letter-spacing: 5px;
+	padding: 20px;
+}
+label{
+	color: $color;
+	font-family: 'Caveat';
+	font-size: 20px;
+	margin-left: 20px;
+
+}
+input{
+	width: 100%;
+}
+.btn1{
+	margin: 25px;
+	border: solid 2px $color;
+	padding: 10px;
+	background-color: $bg-color;
+	color: $color;
+	font-size: 16px;
+	border-radius: 25px;
+	cursor:pointer;
+	&:hover{
+		color: #fff;
+		border: solid 2px #fff;
+	}
+}
+
+@font-face{
+	font-family: Coiny;
+	src:url(../fonts/Coiny/Coiny-Regular.ttf);
+}
+@font-face{
+	font-family: Caveat;
+	src:url(../fonts/Caveat_Brush/CaveatBrush-Regular.ttf);
+}
