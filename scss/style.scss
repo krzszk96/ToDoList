@@ -1,5 +1,6 @@
 $bg-color: #333;
 $color: #42f489;
+$break-small: 700px;
 
 body{
 	background: $bg-color;
@@ -16,6 +17,12 @@ body{
 		display: inline-block;
 		font-size: 30px;
 	}
+
+@media screen and(max-width: $break-small){
+	font-size: 30px;
+	.version{font-size: 15px;}
+}
+
 }
 
 label{
@@ -28,6 +35,7 @@ input{
 	width: 50%;
 	margin: 10px;
 }
+.btnwrap{display: flex;}
 .btn1{
 	margin: 25px;
 	border: solid 2px $color;
@@ -40,6 +48,10 @@ input{
 	&:hover{
 		color: #fff;
 		border: solid 2px #fff;
+	}
+	@media screen and(max-width: $break-small){
+		font-size: 12px;
+		padding: 10px;
 	}
 }
 ul {
