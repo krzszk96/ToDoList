@@ -7,7 +7,7 @@
 
       <!-- build:css css/style.css -->
       <link rel="stylesheet" href="css/style.css">
-      
+
       <!-- endbuild -->
 
 
@@ -17,9 +17,27 @@
 
 <body>
 
-<p>test text</p>
+
+<div class="title">ToDoList v0.1</div>
+
+<form>
+<label for="todo">Add todo thing</label>
+<input type="text" id="todo" name="todo">
+</form>
+
+<button class="btn1" onclick="AddFunction()">Add this to list</button>
+
+<!-- <div>something1</div> -->
 
 <script type="text/javascript">
+function AddFunction() {
+    var para = document.createElement("div");
+    var t = document.createTextNode(
+      document.getElementById('todo').value
+    );
+    para.appendChild(t);
+    document.body.appendChild(para);
+}
 </script>
 
 </body>
