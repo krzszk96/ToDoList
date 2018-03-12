@@ -10,6 +10,11 @@ body {
   .title .version {
     display: inline-block;
     font-size: 30px; }
+  @media screen and (max-width: 700px) {
+    .title {
+      font-size: 30px; }
+      .title .version {
+        font-size: 15px; } }
 
 label {
   color: #42f489;
@@ -20,6 +25,12 @@ label {
 input {
   width: 50%;
   margin: 10px; }
+
+.btnwrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .btn1 {
   margin: 25px;
@@ -34,6 +45,10 @@ input {
   .btn1:hover {
     color: #fff;
     border: solid 2px #fff; }
+  @media screen and (max-width: 700px) {
+    .btn1 {
+      font-size: 12px;
+      padding: 10px; } }
 
 ul {
   margin: 0;
