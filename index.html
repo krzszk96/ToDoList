@@ -18,7 +18,7 @@
 <body>
 
 
-<div class="title">ToDoList v0.1</div>
+<div class="title">ToDoList <div class="version">v0.1</div></div>
 
 <form>
 <label for="todo">Add todo things:</label>
@@ -26,11 +26,12 @@
 </form>
 
 <button class="btn1" onclick="AddFunction(); ClearField();">Add this to list</button>
-<button class="btn1" onclick="Remove()">Remove Last</button>
+<button class="btn1" onclick="Removefromlist()">Remove Checked</button>
 
 <ul id="list" class="list">
-  <li>test1</li>
-  <li>test2</li>
+  <li class="checked">pay rent</li>
+  <li>wash the car</li>
+  <li>take a shower</li>
 </ul>
 
 <!-- <div>something1</div> -->
@@ -45,6 +46,7 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+
 // add new element
 function AddFunction() {
     var li = document.createElement("li");
@@ -54,6 +56,10 @@ function AddFunction() {
     );
     li.appendChild(t);
     document.getElementById("list").appendChild(li);
+}
+function Removefromlist(){
+  var thingToRemove = document.querySelectorAll(".checked")[0];
+  thingToRemove.parentNode.removeChild(thingToRemove);
 }
 
 //clear field
