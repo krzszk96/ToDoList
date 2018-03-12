@@ -26,8 +26,8 @@
 </form>
 
 <div class="btnwrap">
-<button class="btn1" onclick="AddFunction(); ClearField();">Add this to list</button>
-<button class="btn1" onclick="Removefromlist()">Remove Checked</button>
+<button class="btn1" onclick="addfunction(); clearfield();">Add this to list</button>
+<button class="btn1" onclick="removefromlist()">Remove Checked</button>
 </div>
 
 <ul id="list" class="list">
@@ -36,11 +36,11 @@
   <li>take a shower</li>
 </ul>
 
-<!-- <div>something1</div> -->
+
 
 <script type="text/javascript">
 
-//add checked vaule to list
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -49,8 +49,8 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 
-// add new element
-function AddFunction() {
+
+function addfunction() {
     var li = document.createElement("li");
     var input = document.getElementById("todo").value;
     var t = document.createTextNode(
@@ -64,13 +64,13 @@ function AddFunction() {
       document.getElementById("list").appendChild(li);
     }
 }
-function Removefromlist(){
+function removefromlist(){
   var thingToRemove = document.querySelectorAll(".checked")[0];
   thingToRemove.parentNode.removeChild(thingToRemove);
 }
 
-//clear field
-function ClearField(){
+
+function clearfield(){
   document.getElementById("todo").value = "";
 }
 
