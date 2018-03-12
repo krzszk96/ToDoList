@@ -68,6 +68,10 @@ ul li {
   color: $color;
   font-size: 18px;
   transition: 0.2s;
+	
+	@media screen and(max-width: $break-small){
+		font-size: 14px;
+	}
 }
 
 ul li.checked {
