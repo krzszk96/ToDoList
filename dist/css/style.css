@@ -7,6 +7,9 @@ body {
   font-size: 60px;
   letter-spacing: 5px;
   padding: 20px; }
+  .title .version {
+    display: inline-block;
+    font-size: 30px; }
 
 label {
   color: #42f489;
