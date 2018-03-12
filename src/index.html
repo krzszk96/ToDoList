@@ -21,23 +21,46 @@
 <div class="title">ToDoList v0.1</div>
 
 <form>
-<label for="todo">Add todo thing</label>
+<label for="todo">Add todo things:</label>
 <input type="text" id="todo" name="todo">
 </form>
 
-<button class="btn1" onclick="AddFunction()">Add this to list</button>
+<button class="btn1" onclick="AddFunction(); ClearField();">Add this to list</button>
+<button class="btn1" onclick="Remove()">Remove Last</button>
+
+<ul id="list" class="list">
+  <li>test1</li>
+  <li>test2</li>
+</ul>
 
 <!-- <div>something1</div> -->
 
 <script type="text/javascript">
+
+//add checked vaule to list
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// add new element
 function AddFunction() {
-    var para = document.createElement("div");
+    var li = document.createElement("li");
+    // para.className = "bullet";
     var t = document.createTextNode(
       document.getElementById('todo').value
     );
-    para.appendChild(t);
-    document.body.appendChild(para);
+    li.appendChild(t);
+    document.getElementById("list").appendChild(li);
 }
+
+//clear field
+function ClearField(){
+  document.getElementById("todo").value = "";
+}
+
 </script>
 
 </body>
