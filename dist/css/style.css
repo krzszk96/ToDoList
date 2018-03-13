@@ -24,7 +24,8 @@ label {
 
 input {
   width: 50%;
-  margin: 10px; }
+  margin: 10px;
+  padding: 10px; }
 
 .btnwrap {
   display: -webkit-box;
@@ -58,7 +59,7 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+  padding: 0 8px 0 40px;
   list-style-type: none;
   color: #42f489;
   font-size: 18px;
@@ -84,7 +85,48 @@ ul li.checked::before {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   height: 15px;
-  width: 7px; }
+  width: 7px;
+  margin-top: 8px; }
+  @media screen and (max-width: 700px) {
+    ul li.checked::before {
+      margin-top: 4px; } }
+
+.item {
+  display: inline-block; }
+
+.delete {
+  margin-left: 5px;
+  border: solid 2px #f73838;
+  padding: 10px;
+  background-color: #333;
+  color: #f73838;
+  font-size: 16px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  cursor: pointer; }
+  .delete:hover {
+    color: #fff;
+    border: solid 2px #fff; }
+  @media screen and (max-width: 700px) {
+    .delete {
+      font-size: 12px; } }
+
+.edit {
+  margin: 0 5px 0 15px;
+  border: solid 2px #42f489;
+  padding: 10px;
+  background-color: #333;
+  color: #42f489;
+  font-size: 16px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  cursor: pointer; }
+  .edit:hover {
+    color: #fff;
+    border: solid 2px #fff; }
+  @media screen and (max-width: 700px) {
+    .edit {
+      font-size: 12px; } }
 
 @font-face {
   font-family: Coiny;
