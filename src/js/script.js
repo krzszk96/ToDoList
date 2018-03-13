@@ -1,6 +1,7 @@
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
+  if (ev.target.tagName === 'P') {
     ev.target.classList.toggle('checked');
   }
 }, false);

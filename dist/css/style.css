@@ -57,7 +57,6 @@ ul {
 
 /* Style the list items */
 ul li {
-  cursor: pointer;
   position: relative;
   padding: 0 8px 0 40px;
   list-style-type: none;
@@ -70,10 +69,13 @@ ul li {
     ul li {
       font-size: 14px; } }
 
-ul li.checked {
+p {
+  cursor: pointer; }
+
+p.checked {
   color: #fff; }
 
-ul li.checked::before {
+p.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -88,7 +90,7 @@ ul li.checked::before {
   width: 7px;
   margin-top: 8px; }
   @media screen and (max-width: 700px) {
-    ul li.checked::before {
+    p.checked::before {
       margin-top: 4px; } }
 
 .item {
