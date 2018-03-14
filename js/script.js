@@ -6,6 +6,22 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+function checkbox() {
+    var box1 = document.getElementById("red");
+    var box2 = document.getElementById("yellow");
+    var box3 = document.getElementById("green");
+    var listitem = document.getElementById("list").firstChild;
+    if (box1.checked){
+      listitem.classList.toggle('red');
+    }else if (box2.checked){
+      listitem.classList.toggle('yellow');
+    }else if (box3.checked){
+      listitem.classList.toggle('green');
+    }
+    console.log(box1);
+    console.log(listitem);
+}
+
 function removeItem(){
     var item = this.parentNode;
     var parent = item.parentNode;
@@ -27,6 +43,7 @@ function addFunction() {
     var p = document.createElement("p");
     var input = document.getElementById("todo").value;
     var t = document.createTextNode(input);
+    var list = document.getElementById("list");
 
     var deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
@@ -39,13 +56,14 @@ function addFunction() {
     if (input === '') {
       alert("Can't add nothing!");
     } else {
-      // li.appendChild(t);
+
       p.className = "item";
       p.appendChild(t);
-      document.getElementById("list").appendChild(li);
+      list.insertBefore(li, list.childNodes[0]);
       li.appendChild(p);
       li.appendChild(editButton);
       li.appendChild(deleteButton);
+      checkbox();
     }
 
     deleteButton.addEventListener('click', removeItem);

@@ -6,7 +6,6 @@ body{
 	background: $bg-color;
 }
 .title{
-
 	color: $color;
 	font-family: 'Coiny';
 	font-size: 60px;
@@ -32,10 +31,10 @@ label{
 	margin-left: 20px;
 }
 input{
-	width: 50%;
 	margin: 10px;
 	padding: 10px;
 }
+
 .btnwrap{display: flex;}
 .btn1{
 	margin: 25px;
@@ -60,7 +59,6 @@ ul {
   padding: 0;
 }
 
-/* Style the list items */
 ul li {
   position: relative;
   padding: 0 8px 0 40px;
@@ -73,6 +71,25 @@ ul li {
 		font-size: 14px;
 	}
 }
+.import{
+	color: $color;
+	padding-left: 30px;
+	font-size: 18px;
+}
+
+.red{
+	background-color: rgba(201, 76, 76, 0.3);
+}
+.yellow{
+	background-color: rgba(232, 244, 65, 0.3);
+}
+.green{
+	background-color: rgba(122, 244, 66, 0.3);
+}
+#color1{color: rgb(201, 76, 76);}
+#color2{color: rgb(232, 244, 65);}
+#color3{color: rgb(122, 244, 66);}
+
 p{cursor: pointer;}
 
 p.checked{

@@ -23,7 +23,6 @@ label {
   margin-left: 20px; }
 
 input {
-  width: 50%;
   margin: 10px;
   padding: 10px; }
 
@@ -51,7 +50,6 @@ ul {
   margin: 0;
   padding: 0; }
 
-/* Style the list items */
 ul li {
   position: relative;
   padding: 0 8px 0 40px;
@@ -62,6 +60,29 @@ ul li {
   @media screen and (max-width: 700px) {
     ul li {
       font-size: 14px; } }
+
+.import {
+  color: #42f489;
+  padding-left: 30px;
+  font-size: 18px; }
+
+.red {
+  background-color: rgba(201, 76, 76, 0.3); }
+
+.yellow {
+  background-color: rgba(232, 244, 65, 0.3); }
+
+.green {
+  background-color: rgba(122, 244, 66, 0.3); }
+
+#color1 {
+  color: #c94c4c; }
+
+#color2 {
+  color: #e8f441; }
+
+#color3 {
+  color: #7af442; }
 
 p {
   cursor: pointer; }
