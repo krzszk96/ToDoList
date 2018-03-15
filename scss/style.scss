@@ -158,7 +158,25 @@ ul li {
 #color2{color: rgb(232, 244, 65);}
 #color3{color: rgb(122, 244, 66);}
 
-p{cursor: pointer;}
+.home{
+	background-image: url(../images/homeicon.png);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+	padding-top: 10px;
+	// background-position: right;
+}
+.work{
+	background-image: url(../images/work.png);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+	padding-top: 10px;
+}
+
+
 
 p.checked{
 	color: #fff;
