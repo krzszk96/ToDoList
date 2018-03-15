@@ -1,10 +1,11 @@
 
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
-  if (this.firstChild.firstChild.checked===false) {
-    this.firstChild.firstChild.nextSibling.classList.remove('checked');
+  
+  if (event.target.tagName.checked===false) {
+    event.target.nextSibling.classList.remove('checked');
   }else{
-    this.firstChild.firstChild.nextSibling.classList.toggle('checked');
+    event.target.nextSibling.classList.toggle('checked');
   }
 }, false);
 
