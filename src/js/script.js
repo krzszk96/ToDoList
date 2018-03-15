@@ -6,6 +6,10 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+function catShow() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
 function checkbox() {
     var box1 = document.getElementById("red");
     var box2 = document.getElementById("yellow");
@@ -18,8 +22,6 @@ function checkbox() {
     }else if (box3.checked){
       listitem.classList.toggle('green');
     }
-    console.log(box1);
-    console.log(listitem);
 }
 
 function removeItem(){

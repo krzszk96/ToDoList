@@ -20,21 +20,31 @@
 
 <div class="title">ToDoList <div class="version">v0.1</div></div>
 
-<form>
-  <label for="todo">Add todo things:</label>
-  <input type="text" id="todo" name="todo">
+<div class="wrap">
+  <form>
+    <label for="todo">Add todo things:</label>
+    <input type="text" id="todo" name="todo">
+  </form>
+
+  <button class="btn1" onclick="addFunction(); clearField();">Add</button>
+
+  <div class="dropdown">
+    <button onclick="catShow()" class="dropbtn">Cathegory</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#home">Home</a>
+      <a href="#about">Work</a>
+      <a href="#contact">Food</a>
+    </div>
+</div>
+
+</div>
+
   <div class="checkwrap">
     <div class="import">Importance</div>
     <label id="color1"><input type="checkbox" id="red" name="red">high</label>
     <label id="color2"><input type="checkbox" id="yellow" name="yellow">medium</label>
     <label id="color3"><input type="checkbox" id="green" name="green">low</label>
   </div>
-</form>
-
-<div class="btnwrap">
-<button class="btn1" onclick="addFunction(); clearField();">Add this to list</button>
-
-</div>
 
 <ul id="list" class="list"></ul>
 
