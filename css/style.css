@@ -106,6 +106,8 @@ ul {
   padding: 0; }
 
 ul li {
+  display: flex;
+  align-items: center;
   position: relative;
   padding: 0 8px 0 40px;
   list-style-type: none;
@@ -147,22 +149,6 @@ p {
 
 p.checked {
   color: #fff; }
-
-p.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-  margin-top: 8px; }
-  @media screen and (max-width: 700px) {
-    p.checked::before {
-      margin-top: 4px; } }
 
 .item {
   display: inline-block; }

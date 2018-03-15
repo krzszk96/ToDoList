@@ -1,8 +1,10 @@
 
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'P') {
-    ev.target.classList.toggle('checked');
+  if (this.firstChild.firstChild.checked===false) {
+    this.firstChild.firstChild.nextSibling.classList.remove('checked');
+  }else{
+    this.firstChild.firstChild.nextSibling.classList.toggle('checked');
   }
 }, false);
 
@@ -47,6 +49,10 @@ function addFunction() {
     var t = document.createTextNode(input);
     var list = document.getElementById("list");
 
+    var checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.className = "done"
+
     var deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
@@ -62,6 +68,7 @@ function addFunction() {
       p.className = "item";
       p.appendChild(t);
       list.insertBefore(li, list.childNodes[0]);
+      li.appendChild(checkBox);
       li.appendChild(p);
       li.appendChild(editButton);
       li.appendChild(deleteButton);
