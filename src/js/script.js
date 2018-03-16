@@ -13,17 +13,9 @@ function catShow() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// function category(){
-//     var list1 = document.getElementById("list").firstChild;
-//     document.getElementById("myDropdown").addEventListener("click", function( event ) {
-//       if(event.target.id === 'home'){
-//       list1.classList.toggle('home');
-//     }else if (event.target.id === 'work') {
-//       list1.classList.toggle('work');
-//     }
-//     console.log(list1);
-//     },false);
-// }
+function category(){
+
+}
 
 function checkbox() {
     var box1 = document.getElementById("red");
@@ -47,7 +39,6 @@ function removeItem(){
 
 function editItem(){
     var edit = this.parentNode.firstChild.nextSibling;
-
     if (edit.contentEditable == "true") {
         edit.contentEditable = "false";
     } else {

@@ -191,7 +191,8 @@ ul li {
   padding-top: 10px; }
 
 p.checked {
-  color: #fff; }
+  color: #fff;
+  text-decoration: line-through; }
 
 .item {
   display: inline-block; }
