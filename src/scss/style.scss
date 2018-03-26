@@ -73,48 +73,10 @@ input{
 	}
 }
 
-.dropbtn {
-		border: solid 2px $color;
-		background-color: $bg-color;
-		color: $color;
-    padding: 10px;
-    font-size: 16px;
-		height: 50px;
-    cursor: pointer;
-		&:hover{
-			color: #fff;
-			border: solid 2px #fff;
-		}
-		@media screen and(max-width: $break-small){
-			font-size: 12px;
-			padding: 5px;
-		}
+.catcap{
+	color: $color;
+	margin: 0 5px 0 5px;
 }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown a:hover {background-color: #ddd}
-
-.show {display:block;}
 
 ul {
   margin: 0;
@@ -124,6 +86,7 @@ ul {
 ul li {
 	display: flex;
 	align-items: center;
+	border: solid 1px #fff;
   position: relative;
   padding: 0 8px 0 40px;
   list-style-type: none;
@@ -159,6 +122,7 @@ ul li {
 #color3{color: rgb(122, 244, 66);}
 
 p.checked{
+	justify-content: flex-start;
 	color: #fff;
 	text-decoration: line-through;
 }
@@ -182,7 +146,7 @@ p.checked{
 	}
 }
 .edit{
-	margin: 0 5px 0 15px;
+	margin-left: auto;
 	border: solid 2px $color;
 	padding: 10px;
 	background-color: $bg-color;
@@ -197,6 +161,30 @@ p.checked{
 	@media screen and(max-width: $break-small){
 		font-size: 12px;
 	}
+}
+.Home{
+	background-image: url(../images/homeicon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 25px;
+}
+.Work{
+	background-image: url(../images/work.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 25px;
+}
+.Food{
+	background-image: url(../images/food.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 25px;
 }
 
 

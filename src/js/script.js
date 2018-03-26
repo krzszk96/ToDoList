@@ -1,3 +1,4 @@
+var categorychoosen="";
 
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -14,7 +15,9 @@ function catShow() {
 }
 
 function category(){
-
+  var mylist = document.getElementById("categorylist");
+  var value = mylist.options[mylist.selectedIndex].text;
+  categorychoosen = value;
 }
 
 function checkbox() {
@@ -24,10 +27,13 @@ function checkbox() {
     var listitem = document.getElementById("list").firstChild;
     if (box1.checked){
       listitem.classList.toggle('red');
+      box1.checked = false;
     }else if (box2.checked){
       listitem.classList.toggle('yellow');
+      box2.checked = false;
     }else if (box3.checked){
       listitem.classList.toggle('green');
+      box3.checked = false;
     }
 }
 
@@ -49,8 +55,13 @@ function editItem(){
 function addFunction() {
     var li = document.createElement("li");
     var p = document.createElement("p");
+
     var input = document.getElementById("todo").value;
     var t = document.createTextNode(input);
+
+    var cat = document.createElement("div");
+    // var cattxt = document.createTextNode(categorychoosen);
+
     var list = document.getElementById("list");
 
     var checkBox = document.createElement("input");
@@ -70,12 +81,19 @@ function addFunction() {
     } else {
 
       p.className = "item";
+      cat.className = categorychoosen;
+
       p.appendChild(t);
+      // cat.appendChild(cattxt);
+
       list.insertBefore(li, list.childNodes[0]);
+
       li.appendChild(checkBox);
       li.appendChild(p);
       li.appendChild(editButton);
       li.appendChild(deleteButton);
+      li.appendChild(cat);
+
       checkbox();
     }
 
