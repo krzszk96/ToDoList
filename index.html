@@ -23,19 +23,19 @@
 <div class="wrap">
   <form>
     <label for="todo">Add todo things:</label>
-    <input type="text" id="todo" name="todo">
+      <input placeholder="Type todo task here" type="text" id="todo" name="todo">
+
   </form>
 
   <button class="btn1" onclick="addFunction(); clearField();">Add</button>
 
-  <div class="dropdown">
-    <button onclick="catShow()" class="dropbtn">Category</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a id="home">Home</a>
-      <a id="work">Work</a>
-      <a id="food">Food</a>
-    </div>
-</div>
+
+  <div class="catcap">Add in category: </div>
+  <select id="categorylist" onchange="category()">
+    <option>Home</option>
+    <option>Work</option>
+    <option>Food</option>
+  </select>
 
 </div>
 
@@ -47,7 +47,6 @@
   </div>
 
 <ul id="list" class="list"></ul>
-<!-- <div class="home"></div> -->
 
 <script type="text/javascript" src="js/script.js"></script>
 
